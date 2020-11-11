@@ -5,7 +5,7 @@ namespace testeapi.Models
     public class Product
     {
         [Key]
-        public int Id { get; set; }
+        public int Id { get {return Id;} private set{ } }
 
         [Required(ErrorMessage = "Esse campo é obrigatório")]
         [MinLength(3, ErrorMessage = "Esse campo deve conter entre 3 e 60 caracteres")]
